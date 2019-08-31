@@ -1,1 +1,6 @@
+
+# ignore all virtual environments named "_env"
 keras2_env
+
+# ignore emacs temporary files
+*~
