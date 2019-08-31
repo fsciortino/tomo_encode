@@ -1,0 +1,3 @@
+[submodule "eqtools"]
+	path = eqtools
+	url = https://github.com/PSFCPlasmaTools/eqtools/
