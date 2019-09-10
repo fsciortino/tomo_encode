@@ -81,5 +81,6 @@ def get_psi_map(shot=1101014006, t_val=1.2):
 
     return psinormRZ_masked
 
+
 if __name__ == '__main__':
     psi = get_psi_map()
