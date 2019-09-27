@@ -62,10 +62,10 @@ def get_psi_map(e,plot=True,t_val=None):
         # plot at a specific time, given by the user
         t_idx = np.argmin(np.abs(times - t_val))
 
-        maskarr = scipy.where(scipy.logical_or(RLCFS[t_idxx,:]>0.0,scipy.isnan(RLCFS[t_idxx,:])))[0]
-        RLCFSframe = RLCFS[t_idx,maskarr]
-        ZLCFSframe = ZLCFS[t_idx,maskarr]
-    
+        maskarr = scipy.where(scipy.logical_or(RLCFS[t_idx] > 0.0,scipy.isnan(RLCFS[t_idx])))
+        RLCFSframe = RLCFS[t_idx,maskarr[0]]
+        ZLCFSframe = ZLCFS[t_idx,maskarr[0]]
+
         fluxPlot = plt.figure(figsize=(6,11))
         gs = mplgs.GridSpec(2,1,height_ratios=[30,1])
         psi = fluxPlot.add_subplot(gs[0,0])
